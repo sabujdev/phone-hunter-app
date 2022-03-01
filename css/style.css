@@ -10,8 +10,10 @@
 .single {
   display: flex;
   justify-content: center;
+  padding: 20px;
+  margin: 0 auto;
 }
 /* .spinner {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
 } */
