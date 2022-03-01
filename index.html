@@ -12,7 +12,8 @@
 
 </head>
 <body>
-<header>
+<header id="scroll">
+
     <h1 class="text-center text-info">Search Your Phone</h1>
      <!--? search input box  -->
      <div class="input-group w-50 mx-auto mb-3">
@@ -20,10 +21,15 @@
         <!--? search input btn  -->
         <button onclick="searchButton()" class="btn btn-info" type="button" id="search-btn">Search</button>
     </div>
+    <div class="spinner">
+        <div id="loading"class="spinner-border text-info" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+    </div>
 </header>
 
 <main>
-    <div id="detail_info"class="container">
+    <div id="detail_info"class="single w-100 mx-auto">
         <!--? show single product -->
     </div>
 
@@ -37,5 +43,3 @@
 <script src="./app.js"></script>
 </body>
 </html>
-
-<!-- Huawei, oppo apple vivo  -->

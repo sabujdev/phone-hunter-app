@@ -2,3 +2,17 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+.card {
+  background-color: rgb(253, 255, 253);
+  display: flex;
+  justify-content: center;
+}
+
+.single {
+  display: flex;
+  justify-content: center;
+}
+.spinner {
+  display: flex;
+  justify-content: center;
+}
