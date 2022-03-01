@@ -11,11 +11,17 @@ const searchButton = () =>{
 } 
 // product show to UI 
 const displayProduc = (products) =>{
+    const error = document.getElementById('error');
+    const main = document.getElementById('main');
     // console.log(products)
-    if(products.length == 0){
+    if(products.length === 0){
         console.log('name not found')
-        alert('please write phone name')
+        error.innerText = "Please type your phone's name."
+        main.style.display = 'none'
+       
     }else{
+        main.style.display = 'block'
+        error.innerText = '';
         const productContainer = document.getElementById('product_container')
                 const fist20Product = products.splice(0, 20);
                  productContainer.textContent = ''; 
@@ -28,12 +34,16 @@ const displayProduc = (products) =>{
                      <h5 class="card-title">${product.phone_name}</h5>
                      <h6 class="card-text">${product.brand}</h6>
                     </div>
-                 <a href="#scroll"><button onclick="productDetailBtn('${product.slug}')" class="btn btn-info m-3 border text-cerner">View details</button></a>
+                 <a href="#scroll">
+                 <button onclick="productDetailBtn('${product.slug}')" class="btn btn-info m-3 border text-cerner">
+                 View details</button></a>
                  </div>`;
             productContainer.appendChild(newDiv)       
     })
 
 }
+const detailInfo = document.getElementById('detail_info');
+        detailInfo.innerHTML =''
      
 }
 
@@ -67,7 +77,7 @@ const detailInfo = document.getElementById('detail_info');
             </ol>
             <h6 class="text-primary">Sensors:</h6>
             <p>${singleProduct.mainFeatures.sensors}</p>
-            <a href="#" class="btn btn-info">Buy Now</a>
+            <button class="btn btn-info m-3 border text-cerner">Buy Now</button>
         </div>`;
   detailInfo.appendChild(div)
 
