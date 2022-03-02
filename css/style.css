@@ -1,19 +1,22 @@
-.container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+#main-features tr th {
+  width: 35%;
+  border: 1px solid rgb(222, 226, 230);
 }
-.card {
-  background-color: rgb(253, 255, 253);
-  display: flex;
-  justify-content: center;
+
+#main-features tr td {
+  border: 1px solid rgb(222, 226, 230);
+  width: 65%;
 }
-.single {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  margin: 0 auto;
+
+#product-details {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-/* .spinner {
-  /* display: flex;
-  justify-content: center; */
-} */
+
+@media screen and (max-width: 768px) {
+  #product_container,
+  #detail_info,
+  #search-container {
+    width: 90% !important;
+  }
+}
